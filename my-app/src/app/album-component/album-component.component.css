@@ -1,0 +1,20 @@
+.list-image >li{
+    display: flex;
+    float:left;
+    margin: 5px;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.img{
+    height:120px;
+    width: 120px;
+}
+.nav-link{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+a:hover {
+    text-decoration: none;
+}

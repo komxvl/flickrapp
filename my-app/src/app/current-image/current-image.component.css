@@ -1,0 +1,20 @@
+.border-bottom{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+.badge{
+    margin-right: .2rem;
+}
+.back{
+    color: #007bff !important;
+    text-decoration: none !important;;
+    background-color: transparent !important;;
+}
+.back:hover{
+    color:#0056b3 !important;
+    cursor: pointer;
+}
+.back > i{
+    font-weight: bold;
+    font-size: 1.2em;
+}

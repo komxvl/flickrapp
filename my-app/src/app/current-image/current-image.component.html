@@ -1,0 +1,35 @@
+<div class="container-fluid" *ngIf="imageResponse !== null && imageResponse !== undefined">
+  <div class="row border-bottom">
+    <div class="col-sm-12">
+      <a (click)="goBack()" class="back">
+        <i class="fa fa-angle-left nav-link" aria-hidden="true"></i>
+        {{imageResponse.photo.title._content}}.{{imageResponse.photo.originalformat}}
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 d-block mx-auto">
+      <img src="https://farm{{imageResponse.photo.farm}}.staticflickr.com/{{imageResponse.photo.server}}/{{imageResponse.photo.id}}_{{imageResponse.photo.secret}}.jpg" class=" rounded img-thumbnail" />
+      <div class="">
+        <p *ngIf="imageResponse.photo.title._content !== ''">
+        <span>
+          <b>File name:</b>
+        </span>
+          <span>{{imageResponse.photo.title._content}}</span>
+        </p>
+        <p *ngIf="imageResponse.photo.description._content !== '' ">
+        <span>
+          <b>Description:</b>
+        </span>
+          <span>{{imageResponse.photo.description._content}}</span>
+        </p>
+        <p *ngIf="imageResponse.photo.tags.tag.length > 0">
+          <span><b>Keywords:</b></span>
+          <span *ngFor="let tag of imageResponse.photo.tags.tag"  class="badge badge-primary">{{tag._content}}</span>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>

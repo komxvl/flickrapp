@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row " *ngIf="albumsResponse !== null || albumsResponse !== undefined">
+    <div class="col-sm-12 mb-3"  *ngFor="let album of userAlbums">
+      <div class="row album-info">
+        <div class="col-sm-12">
+          <p>
+            <a class="name-albums" [routerLink]="['/album',album.id]">{{album.title._content}}</a>
+            <router-outlet></router-outlet>
+          </p>
+          <p class="count-photo"><i class="fa fa-picture-o" aria-hidden="true"></i>{{album.photos}} photos</p>
+          <p class="count-photo"><i class="fa fa-clock-o" aria-hidden="true"></i>{{album.date_create + '000' | date:'mediumDate'}}</p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+

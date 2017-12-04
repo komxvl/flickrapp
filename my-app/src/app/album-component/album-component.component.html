@@ -1,0 +1,20 @@
+<div class="container-fluid" *ngIf="imageList !== null && imageList !== undefined">
+  <div class="row">
+    <div class="col">
+      <p class="text-center">
+        <a [routerLink]="['/list-albums']">
+          <i class="fa fa-angle-left nav-link" aria-hidden="true"></i>
+        </a>
+        <b>{{albumName}}</b>
+      </p>
+    </div>
+  </div>
+  <div class="row" >
+    <ul class="list-image">
+      <li *ngFor="let img of imageList.photoset.photo"> <!-- tooltip="{{img.title}}"  -->
+          <img tooltip="File name: {{img.title}}"  placement="bottom" class="img" src="https://farm{{img.farm}}.staticflickr.com/{{img.server}}/{{img.id}}_{{img.secret}}.jpg">
+            <a  [routerLink]="['/image',img.id]">Select</a>
+      </li>
+    </ul>
+  </div>
+</div>
